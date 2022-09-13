@@ -25,7 +25,6 @@
     }
 
     h3 { font-size: 6.8vw; }
-    h4 {}
     h4::after { left: 50%;transform: translateX(-50%); }
 
     .theme-iconnav { display: none; }
@@ -86,7 +85,6 @@
         content: '\f106';
     }
     .main-menu .dropdown>a:after { display: none; }
-    tbody, td, tfoot, th, thead, tr { display: block;height: auto; }
     #form01 table.type01 tbody th { width: 100%; }
     #form01 table.type01 ul.chk li { flex-basis: 50%; }
 
@@ -113,9 +111,10 @@
     table.list td.custom_name { font-weight: 600; }
     table.list td.custom_name.active { color: #0d6efd; }
     table.list .list_typeN { display: inline-block;padding: 0 6px 0 0; }
-    .plus-btn { display: none; }
+    /* .plus-btn { display: none; } */
 
     table.respncv_none tbody, table.respncv_none td, table.respncv_none tfoot, table.respncv_none th, table.respncv_none thead, table.respncv_none tr { display: revert; }
+
 
 }
 
@@ -141,5 +140,4 @@
 
     /* 심사원시험 > ISO 9001 */
     .btn-curi { text-align: center; }
-
 }

@@ -190,7 +190,7 @@ table { font-size:inherit; }
     background: #f7f7f7;
 }
 .apply_table td {
-    width: 350px;
+    /* width: 350px; */
     padding: 12px 20px;
     vertical-align: middle;
     border-bottom: 1px solid #ddd;
@@ -208,16 +208,35 @@ table { font-size:inherit; }
     border-collapse: collapse;
 }
 .in_table .bd_right { border-right:1px solid #ddd; }
+
  /*  등록정보조회 페이지 수평정렬 테이블  */
-.apply_table_horizon { text-align: center; }
+.apply_table_horizon { 
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center; 
+}
 .apply_table_horizon thead { border-top: 1px solid #666666; }
 .apply_table_horizon thead th { 
-    text-align:center;
-    padding: 12px 10px; 
+    background: #f7f7f7;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px 10px;
     border-bottom: 1px solid #ddd;
 }
-.apply_table_horizon td { padding: 15px; }
+.apply_table_horizon tbody { border-bottom: 1px solid #ddd; }
+.apply_table_horizon td { 
+    padding: 15px; 
+    border-bottom: 1px solid #ddd;
+}
 
+/* 제출문서 하단 코멘트 */
+.comment{
+    font-size:0.9rem;
+    color:#999;
+}
 
 /* ==== input ==== */
 input[type=text], 
@@ -248,25 +267,7 @@ input#address2, input#extraAddress { width:35%;margin-right:3px; } /* 상세주�
 
 /*  button  */
 button { cursor:pointer; } /* 버튼 */
-.apply_chk { text-align:right; } /* 신청 진행상황 조회 버튼 */
-.apply_chk_btn {
-    /* background:#13bd6e;
-    border:none;
-    color:#fff; */
-    display: inline-block;;
-    margin-top:15px;
-    background: #fff;
-    border: 1px solid #bbb;
-    color: #333;
-    padding:5px 16px;
-    font-size: 0.9rem;
-    text-align:center;
-    border-radius: 0;
-    transition:all 0.1s;
-}
-.apply_chk2 { text-align:center; } /* 신청번호 확인 버튼 */
-.apply_chk_btn_2 { width:60px; }
-.btn { /* 신청하기 버튼 */
+.btn { /* 파란색 버튼 */
     background:#0982ff;
     border:1px solid #0982ff; /* none */
     color:#fff;
@@ -292,38 +293,23 @@ button#btn_zip { /* 우편번호확인 버튼 */
     font-size: 0.75rem;
     vertical-align:top;
 }
-button#submitAction { /* 신청하기 버튼 */
-    background:#0982ff;
-    border:none;
-    color:#fff;
-    padding:8px 20px;
-    font-size: 0.9rem;
-    vertical-align:top;
+.btn_basic{ /* 기본 화이트 버튼 */
+    background:#f9f9f9;
+    border:1px solid #bbb;
+    padding:8px 12px;
     transition:all 0.1s;
-}
-a#submitAction { /* 신청하기 버튼 */
-    display:inline-block;
-    background:#0982ff;
-    border:none;
-    color:#fff;
-    padding:8px 20px;
+    line-height:1.5;
     font-size: 0.9rem;
+}
+.btn_basic:hover{
+    background:#f1f1f1;
+    color:#333;
+}
+button#btn_zip, .btn_check { /* 우편번호확인/중복확인 버튼 */
+    padding:4px 8px;
+    font-size: 0.8rem;
     vertical-align:top;
-    transition:all 0.1s;
 }
-button#submitAction:hover { background:#0370e1;}
-.btn_return a { /* 이전으로 버튼 */
-    display: block;
-    width:130px;
-    height:46px;
-    line-height: 46px;
-    background:#0982ff;
-    margin:40px auto 0;
-    text-align:center;
-    color:#fff;
-    text-decoration: none;
-}
-.btn_return a:hover { color:#fff; }
 .btn_download { /* 다운로드 버튼 */
     display: block;
     margin:0 auto;
@@ -337,7 +323,7 @@ button#submitAction:hover { background:#0370e1;}
 .btn_download a {
     display: inline-block;
     padding: 4px 12px;
-    font-size:0.9rem;
+    font-size:0.8rem;
 }
 .btn_download a:hover { 
     background:#20ad6b;
@@ -349,6 +335,7 @@ button#submitAction:hover { background:#0370e1;}
     vertical-align: middle;
 }
 .btn-viewmore { display: none; }
+
  /*  cert_process  */
  .cert_process { margin:30px 0; }
  .cert_process_tt { font-weight:500; }

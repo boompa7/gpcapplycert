@@ -96,17 +96,17 @@
                                         </tbody>
                                     </table>
                                     <div style="display: flex;">
-                                        <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;" disabled onclick='btnActive();'>신청내역 확인</button>
+                                        <button id="btn_login" class="btn btn-primary confm" style="margin-left: auto;margin-bottom:40px;" disabled onclick='btnActive();'>신청내역 확인</button>
                                     </div>
                                     <div id="submiT" style="margin: 6rem 0;display:none;">
                                         <div>
-                                            <table class="apply_table apply_table_horizon">
+                                            <table class="apply_table_horizon">
                                                 <colgroup>
                                                     <col style="width:5%"> <!-- 순서 -->
                                                     <col style="width:10%"> <!-- 이름 -->
-                                                    <col style="width:15%"> <!-- 인증번호 -->
-                                                    <col style="width:20%" class="only_pc"> <!-- 신청규격 및 등급 -->
-                                                    <col style="width:10%" class="only_pc"> <!-- 유형 -->
+                                                    <col style="width:15%" class="only_pc"> <!-- 인증번호 -->
+                                                    <col style="width:20%"> <!-- 신청규격 및 등급 -->
+                                                    <col style="width:10%"> <!-- 유형 -->
                                                     <col style="width:20%"> <!-- 등록일 -->
                                                     <col style="width:10%"> <!-- 상세보기 -->
                                                 </colgroup>
@@ -114,7 +114,7 @@
                                                     <tr>
                                                         <th scope="col">순서</th>
                                                         <th scope="col">이름</th>
-                                                        <th scope="col">인증번호</th>
+                                                        <th scope="col" class="only_pc">인증번호</th>
                                                         <th scope="col">신청규격 및 등급</th>
                                                         <th scope="col">유형</th>
                                                         <th scope="col">등록일</th>
@@ -124,12 +124,12 @@
                                                 <tbody>
                                                     <tr class="list_type01">
                                                         <td>1</td>
-                                                        <td>홍길동</td>
-                                                        <td>12345678P</td>
+                                                        <td>김제니</td>
+                                                        <td class="only_pc">1912201137B11</td>
                                                         <td>ISO 9001:2015(심사원)</td>
                                                         <td>최초인증</td>
-                                                        <td>2021-08-08 10:49:39</td>
-                                                        <td><a href="../apply/apply_detail.html" id="modal_btn">열기</a></td>
+                                                        <td>2021-08-08</td>
+                                                        <td><a href="../apply/apply_detail.html" class="btn_basic">열기</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
