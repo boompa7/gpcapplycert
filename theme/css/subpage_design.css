@@ -225,7 +225,6 @@ table { font-size:inherit; }
     padding: 12px 10px;
     border-bottom: 1px solid #ddd;
 }
-.apply_table_horizon tbody { border-bottom: 1px solid #ddd; }
 .apply_table_horizon td { 
     padding: 15px; 
     border-bottom: 1px solid #ddd;
@@ -285,6 +284,7 @@ button { cursor:pointer; } /* 버튼 */
 .btn_basic{ /* 기본 화이트 버튼 */
     background:#f9f9f9;
     border:1px solid #bbb;
+    border-radius: 0px;
     padding:8px 12px;
     transition:all 0.1s;
     line-height:1.5;

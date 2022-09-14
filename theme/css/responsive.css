@@ -62,6 +62,27 @@
 
     .main-menu .dropdown>a:after { display: none; }
 
+    /* ------------------------------- 등록신청 페이지 ------------------------------- */
+    /* step navi */
+    .step_navi ul{ display:block; }
+    .step_navi ul li{
+        width: calc(100%/2 - 3px);
+        margin-right:0px;
+        margin-bottom:3px;
+        line-height: 1.8;
+    }
+    .step_navi ul li p{ 
+        font-size:0.95rem;
+        font-weight: 400; 
+        padding:10px 15px; 
+    }
+    .arrow{ 
+        width:16px;
+        height:16px;
+        top: 28px;
+        right: 20px;
+    }
+    .arrow::after{ height:0; }
     /* Table */
     tbody, td, tfoot, th, thead, tr {
         display: block;
@@ -70,6 +91,7 @@
     .apply_table tbody th, .apply_table tbody td {
         width: 100%;
         height: auto;
+        padding:15px 10px; /* 셀 내부 간격 조정 */
     }
 
     /* 수평정렬 테이블 */
@@ -91,10 +113,13 @@
     .apply_table.apply_table_horizon .iso_label {
         font-weight: 500;
         background: #f7f7f7;
+        color:#666;
         position: relative;
+        transition: all 0.1s;
     }
     .apply_table.apply_table_horizon .iso_label.active {
-        color: #0d6efd;
+        color: #111;
+        background: #f1f1f1;
     }
     .apply_table.apply_table_horizon .viewmore {
         padding: 0 0 10px;
@@ -117,7 +142,7 @@
         font-size: 18px;
         color: #333;
     }
-    .apply_table.apply_table_horizon .mobile-arrow:before {
+    .apply_table.apply_table_horizon .mobile-arrow:before { /* 기본 화살표 */
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: inherit;
@@ -125,10 +150,14 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         content: '\f107';
+        color:#666;
     }
-    .apply_table.apply_table_horizon .mobile-arrow.active:before {
+    .apply_table.apply_table_horizon .mobile-arrow.active:before { /* 활성화 됬을때 화살표 */
         content: '\f106';
+        color:#111;
     }
+    /* 수평정렬 테이블 플러스 버튼 */
+    .plus-btn{ display:none; }
 
     /* 자격정보 입력 > 신청규격 */
     table.apply_table tbody td.iso_check {
@@ -151,11 +180,45 @@
         width: 48%;
     }
 
+    /* 이메일란 */
+    .emailCell{ 
+        display:flex; 
+        flex-wrap:wrap;
+    }
+    input#email{ flex-basis:82%; }
+    .btn_check{ flex-basis:16%; }
+
+    input[type=text], input[type=number], input[type=tel], input[type=password], select{ width:100%; } /* input 넓이 조정 */
+    label.type_checkbox{ width:49%; }
+    .text_box_gray{  padding:15px; } /* 상단 제출서류 안내 박스 */
+    input#address1{ width:100%; } /* 우편번호주소 */
+    input#address2, input#extraAddress{ width: calc(100%/2 - 1.5px); }
+    input#extraAddress{ margin-right:0px; }
+ 
+    /* 인증 프로세스 */
+    .cert_process_box ul li{
+        width: 30.5%;
+        margin-right:2%;
+        margin-bottom:12px;  
+        background:#f9f9f9;
+    }
+    .arrow-next::after{
+        width:12px;
+        height:12px;
+        right: -20px;
+        bottom: 23px;
+    }
+
     /* 개인정보 이용약관 */
-    .c-txt { margin-top: 6px; }
+    .c-txt { margin-top: 10px; }
+    .chk-area { padding: 16px 0 0 20px; }
+    .tit-box { height:70px; }
     .acc-lst .tit-box label { width: 100%; }
     #form01 table.type01 tbody th { width: 100%; }
     #form01 table.type01 ul.chk li { flex-basis: 50%; }
+
+    /* 입금내역 안내 */
+    .text-box_border{ padding:2rem; }
 
     .modal_wrap { width: 90%; }
 
@@ -194,5 +257,23 @@
         flex: 0 0 100%;
         width: 100%;
     }
+
+    /* ------------------------------- 등록신청 페이지 ------------------------------- */
+    /* 인증 프로세스 */
+    .cert_process_box ul li{
+        width: 100%;
+        margin-right:0;
+        margin-bottom:20px;  
+    }
+    .arrow-next::after{
+        transform: rotate(135deg);
+        width:12px;
+        height:12px;
+        right: 49%;
+        bottom: -22px;
+    }
+    /* 테이블 */
+    input#email{ flex-basis:76%; }
+    .btn_check{ flex-basis:20%; }
 
 }

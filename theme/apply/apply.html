@@ -94,36 +94,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row" class="required">자격구분</th>
+                                                <th scope="row">신청규격 및 등급</th>
                                                 <td>
-                                                    <select id="kind" name="kind">
-                                                        <option value="ISO 기반 표준 심사원">ISO 기반 표준 심사원</option>
-                                                        <option value="ISO 9001:2015">ISO 9001:2015</option>
-                                                        <option value="ISO 14001:2015">ISO 14001:2015</option>
-                                                        <option value="ISO 45001:2018">ISO 45001:2018</option>
-                                                        <option value="ISO 22000:2018">ISO 22000:2018</option>
-                                                        <option value="ISO 27001:2013">ISO 27001:2013</option>
-                                                        <option value="ISO 13485:2016">ISO 13485:2016</option>
-                                                        <option value="ISO 20000-1:2018">ISO 20000-1:2018</option>
-                                                        <option value="ISO 22301:2019">ISO 22301:2019</option>
-                                                        <option value="ISO 21001:2018">ISO 21001:2018</option>
-                                                        <option value="ISO 37001:2016">ISO 37001:2016</option>
-                                                        <option value="ISO 22716:2007">ISO 22716:2007</option>
-                                                        <option value="ISO 27701:2019">ISO 27701:2019</option>
-                                                        <option value="ISO 27017:2015">ISO 27017:2015</option>
-                                                        <option value="ISO 27018:2019">ISO 27018:2019</option>
-                                                        <option value="ISO 27799:2016">ISO 27799:2016</option>
-                                                        <option value="검증심사원">검증심사원</option>
-                                                    </select>
+                                                    ISO 9001:2015(심사원)
                                                 </td>
                                                 <th scope="row">유형</th>
                                                 <td>최초인증</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">신청규격 및 등급</th>
-                                                <td colspan="3">
-                                                    ISO 9001:2015(심사원)
-                                                </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row" class="required">이름(한)</th>
@@ -136,12 +112,28 @@
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <th scope="row" class="required">아이디</th>
+                                                <td colspan="3">
+                                                    <input type="text" name="mb_id" value="" id="reg_mb_id" class="maxlength70" maxlength="20">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="required">비밀번호</th>
+                                                <td>
+                                                    <input type="password" name="mb_password" id="reg_mb_password" minlength="3" maxlength="20">
+                                                </td>
+                                                <th scope="row" class="required">비밀번호 확인</th>
+                                                <td>
+                                                    <input type="password" name="mb_password_re" id="reg_mb_password_re" minlength="3" maxlength="20">
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th scope="row" class="required">핸드폰번호</th>
                                                 <td>
                                                     <input type="text" id="hp" name="hp" value="010-123-4567">
                                                 </td>
                                                 <th scope="row" class="required">이메일</th>
-                                                <td>
+                                                <td class="emailCell">
                                                     <input type="text" id="email" name="email" value="test1@gmail.com">
                                                     <input type="button" onclick="duplicatecheck()" value="중복확인" class="btn_basic btn_check" style="margin-left: 8px;">
                                                     <p class="duplicate_text" style="color: #0086ff;margin:5px 0 0;font-size:0.9rem;">* 사용 가능한 이메일입니다.</p>
@@ -267,7 +259,7 @@
                                                     <span class="arrow-next"></span>
                                                 </li>
                                                 <li>
-                                                    인증승인<span>&nbsp;</span>
+                                                    인증승인<span class="tablet_none">&nbsp;</span>
                                                     <span class="arrow-next"></span>
                                                 </li>
                                                 <li>
@@ -275,7 +267,7 @@
                                                     <span class="arrow-next"></span>
                                                 </li>
                                                 <li>
-                                                    수령처로 발송<span>&nbsp;</span>
+                                                    수령처로 발송<span class="tablet_none">&nbsp;</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -305,7 +297,7 @@
                                                 <button data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn-acc serVice">열기</button>
                                             </div>
                                             <div class="acc-layer collapse" id="collapseExample">
-                                                <div style="padding: 3rem;">
+                                                <div style="padding: 3rem;text-align:justify;">
                                                     제 1장 총칙
                                                     <br><br>
                                                     제 1 조(목적)
